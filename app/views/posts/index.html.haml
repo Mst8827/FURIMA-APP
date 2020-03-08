@@ -17,11 +17,15 @@
             / 
             枚までアップロードできます
 
-          .image-field
+          .image-field 
             = form_with url:"#" do |f|
               = f.label :image, class: 'image-field__label' do
                 = icon('fas', 'camera', class: 'camera-icon')
                 = f.file_field :image, class: 'image-field__label__hidden'
+            .image-upload-description-box
+              %p.first-line ドラッグアンドドロップ
+              %p.second-line またはクリックしてファイルをアップロード
+          
 
       .main-content__box__item-info-content
         .main-content__box__item-info-content__subtitle
